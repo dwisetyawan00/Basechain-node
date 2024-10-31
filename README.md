@@ -8,6 +8,14 @@
 | General Purpose - xl | 4 | 16 GB | 25 Mbps |
 | General Purpose - 4xl | 16 | 64 GB | 5 Gbps |
 
+## *NOTE:*
+
+#### *Baca dengan teliti agar tidak bingung ditengah-tengah, ikuti step by step jika di rasa command tidak respond cek directory dan cari file berada*
+### *SIAP MUMET = SIAP JP (SEMOGA)*
+----------------------------------------------------
+# LFG !!!
+
+
 ## 1. Install Software Yang Dibutuhkan
 ### Install Docker
 ```bash
@@ -105,7 +113,14 @@ eigenlayer operator register operator.yaml
 ```
 #### Masukkan Password kalian
 
-## 11. Install Chainbase-AVS-CLI
+## 11. Buat BLS-key
+```bash
+eigenlayer keys create --key-type bls GANTI-bls
+```
+*`GANTI` dengan keyname mu*
+#### Masukkan passwordmu
+
+## 12. Install Chainbase-AVS-CLI
 ```bash
 wget https://github.com/chainbase-labs/chainbase-avs/archive/refs/tags/v0.1.9.tar.gz && \
 tar -xzf chainbase-node_Linux_x86_64.tar.gz && \
@@ -113,7 +128,7 @@ sudo mv chainbase-node /usr/local/bin/ && \
 sudo chmod +x /usr/local/bin/chainbase-node && \
 rm chainbase-node_Linux_x86_64.tar.gz
 ```
-## 12. Chainbase AVS Contract Registration
+## 13. Chainbase AVS Contract Registration
 ```bash
 git clone https://github.com/chainbase-labs/chainbase-avs-setup && cd chainbase-avs-setup/holesky
 ```
@@ -191,7 +206,7 @@ NODE_SOCKET=GANTI_IP_VPS:8090
 ```
 #### *(Semua yang bertuliskan GANTI harus diganti sesuai dengan data kalian)*
 
-## 13. Buatkan variable buat register untuk menghindari error
+## 14. Buatkan variable buat register untuk menghindari error
 ```bash
 cat > .env.register << EOL
 NODE_ECDSA_KEY_PASSWORD=GANTI
@@ -203,7 +218,7 @@ NODE_BLS_KEY_FILE_PATH=/root/.eigenlayer/operator_keys/GANTI.bls.key.json
 EOL
 ```
 
-## 14. Cari lokasi docker-compose kalian
+## 15. Cari lokasi docker-compose kalian
 ```bash
 sudo find / -name "docker-compose.yaml" -o -name "docker-compose.yml" 2>/dev/null
 ```
@@ -230,7 +245,7 @@ docker-compose down
 docker-compose up -d
 ```
 
-## 15. pastikan folder tertentu ada dan pengguna docker memiliki izin menulis yang benar
+## 16. pastikan folder tertentu ada dan pengguna docker memiliki izin menulis yang benar
 ```bash
 cd chainbase-avs-setup/holesky
 ```
@@ -238,16 +253,16 @@ cd chainbase-avs-setup/holesky
 source .env && mkdir -pv ${EIGENLAYER_HOME} ${CHAINBASE_AVS_HOME} ${NODE_LOG_PATH_HOST}
 ```
 
-## 16. Mengubah chainbase-avs.sh izin file
+## 17. Mengubah chainbase-avs.sh izin file
 ```bash
 chmod +x ./chainbase-avs.sh
 ```
 
-## 17. Ganti OPERATOR dengan Nama Operator Kalian
+## 18. Ganti OPERATOR dengan Nama Operator Kalian
 ```bash
 nano premetheus.yml
 ```
-#### ***GANTI / Edit dengan ini***
+#### ***PASTE / Edit dengan ini***
 ```bash
 global:
   scrape_interval: 15s
@@ -273,7 +288,7 @@ scrape_configs:
         - "chainbase_jobmanager:9249"
 ```
 		
-## 18. Pastikan kalian masih di directory chainbase-avs-setup/holesky
+## 19. Pastikan kalian masih di directory chainbase-avs-setup/holesky
 ```bash
 nano chainbase-avs.sh
 ```
@@ -294,24 +309,43 @@ register_chainbase_avs() {
 
 }
 ```
+## 20. Untuk memastikan variable masuk
+```bash
+export OPERATOR_ECDSA_KEY_PASSWORD="PASSWORD_KALIAN"
+export OPERATOR_BLS_KEY_PASSWORD="PASSWORD_KALIAN"
+```
+## 21. Buat Directory & pindahkan keymu untuk variablenya
+```bash
+sudo mkdir -p /app
+sudo cp /root/.eigenlayer/operator_keys/GANTI.ecdsa.key.json /app/node.ecdsa.key.json
+sudo cp /root/.eigenlayer/operator_keys/GANTI.bls.key.json /app/node.bls.key.json
+```
+#### *`GANTI` Sesuai dengan keyname mu*
 
-## 19. Daftarkan Chainbase AVS
+## 22. Berikan Peizinan env
+```bash
+sudo chmod 600 /app/node.ecdsa.key.json
+sudo chmod 600 /app/node.bls.key.json
+```
+
+
+## 23. Daftarkan Chainbase AVS
 ```bash
 ./chainbase-avs.sh register
 ```
 
-## 20. Run Chainbase AVS
+## 24. Run Chainbase AVS
 ```bash
 ./chainbase-avs.sh run
 ```
 
-## 21. Check Kesehatan Node
+## 25. Check Kesehatan Node
 
 ```bash
 curl -i 172.18.0.5:9010/eigen/node/health
 ```
 
-## 22. Ambil Link Operator
+## 26. Ambil Link Operator
 ```bash
 cd $HOME
 ```
