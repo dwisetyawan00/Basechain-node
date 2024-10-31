@@ -359,14 +359,23 @@ eigenlayer operator status operator.yaml
 ## DAFTAR [DISINI](https://genesis.chainbase.com/referral?referral_code=L320RUKAC)
 ### *- Complete all task*
 ### *DONE*
-# SALAM JEPE
+															
+<div align="center">
+  
+  # ✨ SALAM JEPE ✨
+  
+</div>
 
-
+## <div align="center">Powered by : </div>
 <p align="center">
   <img src="https://raw.githubusercontent.com/dwisetyawan00/logo/refs/heads/main/au_ah_transparant.png" width="300" align="center" />
 </p>
 
-
+<div align="center">
+  
+  ## 💦 techzs 💦
+  
+</div>
 
 
 
