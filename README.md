@@ -1,4 +1,6 @@
-# Tutorial Menyiapkan Operator AVS Coinbase
+# Tutorial INSTALL Operator AVS Coinbase
+![Banner](https://github-production-user-asset-6210df.s3.amazonaws.com/38981255/356076147-d318c586-e56c-4c98-a10b-1e084ddca58c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241031%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241031T203315Z&X-Amz-Expires=300&X-Amz-Signature=8668cfd4f0b590b8ae6f224968e5082c608cdc2cffc3823463786ce237f69a59&X-Amz-SignedHeaders=host)
+
 ## Persyaratan Hardware
 | Class | vCPUs (10th gen+) | Memory | Networking Capacity |
 |-------|-------------------|--------|-------------------|
@@ -326,7 +328,9 @@ eigenlayer operator status operator.yaml
 # SALAM JEPE
 
 
-![Banner](https://raw.githubusercontent.com/dwisetyawan00/logo/refs/heads/main/au_ah_transparant.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dwisetyawan00/logo/refs/heads/main/au_ah_transparant.png" width="300" align="center" />
+</p>
 
 
 
