@@ -352,6 +352,9 @@ cd $HOME
 ```bash
 eigenlayer operator status operator.yaml
 ```
+### DONE
+## ISI [FORM](https://docs.google.com/forms/d/e/1FAIpQLSd-ikaoIrOMd-L_pTvr8e-BIOTxQjkRh8ENGClyl7m1IFbqPQ/viewform?pli=1)
+
 ## *SCROLL TRUS BANG*
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
