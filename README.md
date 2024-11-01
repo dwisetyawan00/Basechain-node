@@ -84,7 +84,9 @@ eigenlayer operator config create
 - `Contoh: /root/.eigenlayer/operator_keys/nama_kalian.ecdsa.key.json`
 
 ## 7. Edit File metadata.json
-- Buka dengan perintah nano metadata.json
+```bash
+nano metadata.json
+```
 - Edit dan isi data kalian seperti Nama, Website, Deskripsi, Link Twitter
 - Untuk Logo, upload logo ke Repository Github
 - Ambil Link Raw-nya
