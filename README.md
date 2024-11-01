@@ -121,7 +121,7 @@ eigenlayer operator register operator.yaml
 
 ## 11. Buat BLS-key
 ```bash
-eigenlayer keys create --key-type bls GANTI-bls
+eigenlayer keys create --key-type bls GANTI
 ```
 *`GANTI` dengan keyname mu*
 #### Masukkan passwordmu
