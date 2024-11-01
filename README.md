@@ -128,7 +128,7 @@ eigenlayer keys create --key-type bls GANTI
 
 ## 12. Install Chainbase-AVS-CLI
 ```bash
-wget https://github.com/chainbase-labs/chainbase-avs/archive/refs/tags/v0.1.9.tar.gz && \
+wget https://github.com/chainbase-labs/chainbase-avs/releases/download/v0.1.9/chainbase-node_Linux_x86_64.tar.gz && \
 tar -xzf chainbase-node_Linux_x86_64.tar.gz && \
 sudo mv chainbase-node /usr/local/bin/ && \
 sudo chmod +x /usr/local/bin/chainbase-node && \
