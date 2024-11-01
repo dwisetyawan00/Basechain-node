@@ -228,7 +228,7 @@ EOL
 ```bash
 sudo find / -name "docker-compose.yaml" -o -name "docker-compose.yml" 2>/dev/null
 ```
-#### *kalau kalian mengikuti step mungkin docker-compose.yaml anda berada di `$HOME/docker-compose.yaml`*
+#### *kalau kalian mengikuti step mungkin docker-compose.yaml anda berada di `/chainbase-avs-setup/holeskydocker-compose.yaml`*
 #### jika sudah ketemu edit port di docker-compose agar tidak error
 ```bash
 nano docker-compose.yaml
