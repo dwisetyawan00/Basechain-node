@@ -104,9 +104,10 @@ curl -I URL-RPC-KALIAN
 - Masukkan di operator.yaml bagian metadata_url dan Save `(defaultnya berada di $HOME/operator.yaml)`
 ```bash
 nano operator.yaml
-## 10. Update operator.yaml
 ```
 - Line 5 `metadata_url=PASTE_DISINI`
+
+## 10. Update operator.yaml
 ```bash
 eigenlayer operator update operator.yaml
 ```
