@@ -101,9 +101,12 @@ curl -I URL-RPC-KALIAN
 ## 9. Create Metadata URL
 - Upload file metadata.json kalian ke GitHub
 - Ambil link RAW-nya
-- Masukkan di operator.yaml bagian metadata_url dan Save `(defaultnya berada di $HOME/operator.yml)`
-
+- Masukkan di operator.yaml bagian metadata_url dan Save `(defaultnya berada di $HOME/operator.yaml)`
+```bash
+nano operator.yaml
 ## 10. Update operator.yaml
+```
+- Line 5 `metadata_url=PASTE_DISINI`
 ```bash
 eigenlayer operator update operator.yaml
 ```
